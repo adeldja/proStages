@@ -8,11 +8,11 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ProStageController extends AbstractController
 {
-
+    /**
+     * @Route("/", name="proStage_accueil")
+     */
     public function index()
     {
-        return $this->render('pro_stage/index.html.twig', [
-            'controller_name' => 'ProStageController',
-        ]);
+        return $this->render('pro_stage/index.html.twig');
     }
 }
