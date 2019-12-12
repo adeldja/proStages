@@ -17,11 +17,13 @@ class ProStageController extends AbstractController
     }
 
     /**
-     * @Route("/Stages", name="proStage_Stages")
+     * @Route("/Stages/{id}", name="proStage_Stages")
      */
-    public function indexStages()
+    public function indexStages($id)
     {
-        return $this->render('pro_stage/indexStages.html.twig');
+        return $this->render('pro_stage/indexStages.html.twig',
+        ['idStages' => $id]   
+    );
     }
 
     /**
